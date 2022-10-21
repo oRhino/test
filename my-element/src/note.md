@@ -1,6 +1,12 @@
+## vite 配置别名@
+
+- vite.config.ts
+
+```
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path"; //vite 3 不支持commonjs
+// const path = require('path') //vite 2
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,3 +21,14 @@ export default defineConfig({
     },
   },
 });
+```
+
+- tsconfig.json
+
+```
+//添加
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+```

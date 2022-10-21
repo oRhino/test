@@ -26,7 +26,7 @@
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import { watch, ref } from "vue";
 import { toLine } from "../../../utils/index";
-import { useCopy } from "../../../hooks/index";
+import { useCopy } from "@/hooks/index";
 
 const props = defineProps<{
   title: string;

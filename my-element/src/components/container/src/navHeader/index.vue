@@ -28,4 +28,9 @@ const toggle = () => {
   display: flex;
   align-items: center;
 }
+svg{
+  width: 1.2em;
+  height: 1.2em;
+}
+
 </style>
