@@ -1,24 +1,32 @@
-import { def } from "@vue/shared";
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
-import Container from "../components/container/src/index.vue";
+import { def } from '@vue/shared';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from '../views/Home.vue';
+import Container from '../components/container/src/index.vue';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: "/",
+    path: '/',
     component: Container,
     children: [
       {
-        path: "/",
+        path: '/',
         component: Home,
       },
       {
-        path: "/chooseIcon",
-        component: () => import("../views/chooseIcon/index.vue"),
+        path: '/chooseIcon',
+        component: () => import('../views/chooseIcon/index.vue'),
       },
       {
-        path: "/chooseArea",
-        component: () => import("../views/chooseArea/index.vue"),
+        path: '/chooseArea',
+        component: () => import('../views/chooseArea/index.vue'),
+      },
+      {
+        path: '/trend',
+        component: () => import('../views/trend/index.vue'),
+      },
+      {
+        path: '/notification',
+        component: () => import('../views/notification/index.vue'),
       },
     ],
   },
