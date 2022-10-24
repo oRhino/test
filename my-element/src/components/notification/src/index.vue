@@ -1,13 +1,15 @@
 <template>
   <div>
-    <el-popover placement="bottom" trigger="click">
-      <slot></slot>
+    <el-popover placement="bottom" :width="300" trigger="click">
+      <template #default>
+        <slot></slot>
+      </template>
       <template #reference>
         <el-badge
+          style="cursor: pointer"
           :is-dot="isDot"
           :max="max"
           :value="value"
-          style="cursor: pointer"
         >
           <component :is="`el-icon-${toLine(icon)}`"></component>
         </el-badge>
