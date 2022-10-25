@@ -1,32 +1,35 @@
 <template>
-  <el-menu
+  <m-menu
+    :data="data"
+    router
+    :defaultActive="$route.path"
     :collapse="collapse"
-    default-active="1"
-    class="el-menu-vertical-demo"
-  >
-    <el-menu-item index="1">
-      <el-icon><el-icon-menu /></el-icon>
-      <span>首页</span>
-    </el-menu-item>
-    <el-menu-item index="2">
-      <el-icon><el-icon-menu /></el-icon>
-      <span>图片选择器</span>
-    </el-menu-item>
-    <el-menu-item index="3">
-      <el-icon><el-icon-menu /></el-icon>
-      <span>趋势标记</span>
-    </el-menu-item>
-  </el-menu>
+  />
 </template>
 
 <script setup lang="ts">
 let props = defineProps<{
   collapse: boolean;
 }>();
+
+const data = [
+  { name: '首页', index: '/', icon: 'HomeFilled' },
+  { name: '图标选择器', index: '/chooseIcon', icon: 'Check' },
+  { name: '省市区选择器', index: '/chooseArea', icon: 'Location' },
+  { name: '趋势标记', index: '/trend', icon: 'Sort' },
+  { name: '时间选择', index: '/chooseTime', icon: 'Timer' },
+  { name: '导航菜单', index: '/menu', icon: 'Menu' },
+  { name: '通知菜单', index: '/notification', icon: 'Bell' },
+  { name: '城市选择', index: '/chooseCity', icon: 'TurnOff' },
+  { name: '进度条', index: '/progress', icon: 'DArrowRight' },
+  { name: '日历', index: '/calendar', icon: 'ScaleToOriginal' },
+  { name: '表单', index: '/form', icon: 'Setting' },
+  { name: '表格', index: '/table', icon: 'ShoppingBag' },
+];
 </script>
 
 <style lang="scss" scoped>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-}
+// .el-menu-vertical-demo:not(.el-menu--collapse) {
+//   width: 200px;
+// }
 </style>
