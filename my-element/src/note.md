@@ -32,3 +32,22 @@ export default defineConfig({
       "@/*": ["src/*"]
     }
 ```
+
+## Vite 使用 jsx
+
+- npm 安装 插件
+
+```
+npm i -D @vitejs/plugin-vue-jsx
+yarn add -D @vitejs/plugin-vue-jsx
+```
+
+- vite.congfig.ts
+
+```
+import vuejsx from '@vitejs/plugin-vue-jsx';
+export default defineConfig({
+  plugins: [vue(), vuejsx()],
+  //....
+}
+```
