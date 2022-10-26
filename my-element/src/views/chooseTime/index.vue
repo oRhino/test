@@ -7,6 +7,12 @@
     />
     <br />
     <br />
+    <m-choose-date
+      @startChange="startDateChange"
+      @endChange="endDateChange"
+      :disableToday="false"
+      :endOptions="endOptions"
+    />
   </div>
 </template>
 
@@ -26,6 +32,20 @@ const endTimeChange = ({
 
 const endOptions = {
   clearable: false,
+};
+
+const startDateChange = (startDate: string) => {
+  console.log(startDate);
+};
+
+const endDateChange = ({
+  startDate,
+  endDate,
+}: {
+  startDate: Date;
+  endDate: Date;
+}) => {
+  console.log(startDate, endDate);
 };
 </script>
 
