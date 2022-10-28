@@ -6,6 +6,7 @@ import list from './list';
 import menu from './menu';
 import chooseDate from './chooseDate';
 import chooseTime from './chooseTime';
+import form from './form';
 import { App } from 'vue';
 
 const componments = [
@@ -17,6 +18,7 @@ const componments = [
   menu,
   chooseDate,
   chooseTime,
+  form,
 ];
 
 export default {

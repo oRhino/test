@@ -6,16 +6,10 @@
     </div>
 
     <div class="icon">
-      <component
-        :is="`el-icon-${toLine(upIcon)}`"
-        :style="{ color: !reverseColor ? upIconColor : '#52c4ea' }"
-        v-if="type === 'up'"
-      ></component>
-      <component
-        :is="`el-icon-${toLine(downIcon)}`"
-        :style="{ color: !reverseColor ? downIconColor : '#f5222d' }"
-        v-else
-      ></component>
+      <component :is="`el-icon-${toLine(upIcon)}`" :style="{ color: !reverseColor ? upIconColor : '#52c4ea' }"
+        v-if="type === 'up'"></component>
+      <component :is="`el-icon-${toLine(downIcon)}`" :style="{ color: !reverseColor ? downIconColor : '#f5222d' }"
+        v-else></component>
       <!-- <el-icon-arrowup
         :style="{ color: !reverseColor ? upIconColor : '#52c4ea' }"
         v-if="type === 'up'"
@@ -77,7 +71,7 @@ let props = defineProps({
     type: String,
     default: '#f5222d',
   },
-  // 下降趋势文字颜色
+  // 下降趋势文字颜色                                      
   downTextColor: {
     type: String,
     default: '#52c4ea',
@@ -98,10 +92,12 @@ let textColor = computed(() => {
 .trend {
   display: flex;
   align-items: center;
+
   .text {
     font-style: 12px;
     margin-right: 4px;
   }
+
   .icon {
     svg {
       width: 0.8em;
