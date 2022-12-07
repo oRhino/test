@@ -1,11 +1,11 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import ElementPlus from "element-plus";
-import "element-plus/dist/index.css";
-import * as ElementPlusIconsVue from "@element-plus/icons-vue";
-import { toLine } from "./utils";
-import mUI from "./components";
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
+import * as ElementPlusIconsVue from '@element-plus/icons-vue';
+import { toLine } from './utils';
+import mUI from './components';
 
 const app = createApp(App);
 //全局注册组件
@@ -19,4 +19,10 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 
 app.use(router).use(ElementPlus).use(mUI);
-app.mount("#app");
+app.mount('#app');
+
+function foo(input: string) {
+  return input;
+}
+
+foo('hello');
